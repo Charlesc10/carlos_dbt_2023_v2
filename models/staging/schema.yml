@@ -4,10 +4,10 @@ version: 2
 sources:
     - name: staging
       #For bigquery:
-      #database: taxi-rides-ny-339813
+      database: dbt_cangulo
 
       # For postgres:
-      database: dbt_cangulo
+      #database: dbt_cangulo
 
       schema: trips_data_all
 
