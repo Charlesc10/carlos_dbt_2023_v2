@@ -4,10 +4,10 @@ version: 2
 sources:
     - name: staging
       #For bigquery:
-      database: dbt_cangulo
+      database: future-depth-386418
 
       # For postgres:
-      #database: dbt_cangulo
+      #database: future-depth-386418
 
       schema: trips_data_all
 
