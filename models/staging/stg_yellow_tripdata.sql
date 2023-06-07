@@ -1,4 +1,4 @@
-{{ config(materialized='view') }}
+{{ config(materialized='table') }}
  
 with tripdata as 
 (
@@ -8,7 +8,7 @@ with tripdata as
   where vendorid is not null 
 )
 select
-   -- identifiers
+    -- identifiers
     {{ dbt_utils.surrogate_key(['vendorid', 'tpep_pickup_datetime']) }} as tripid,
     cast(vendorid as integer) as vendorid,
     cast(ratecodeid as integer) as ratecodeid,

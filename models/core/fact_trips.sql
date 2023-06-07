@@ -19,7 +19,7 @@ trips_unioned as (
 ), 
 
 dim_zones as (
-    select * from {{ ref('taxi_zone_lookup') }}
+    select * from {{ ref('dim_zones') }}
     where borough != 'Unknown'
 )
 select 
